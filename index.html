@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Keaton Ludwig · Data Science Portfolio</title>
+  <meta name="description" content="Data science portfolio of Keaton Ludwig: physics-trained analyst working in forecasting, regression, statistical testing, and interactive visualization.">
+  <meta property="og:title" content="Keaton Ludwig · Data Science Portfolio">
+  <meta property="og:description" content="Nine projects, from a peer-reviewed binary star study to store-level demand forecasting.">
+  <meta property="og:image" content="https://keatonl2.github.io/assets/img/binary-star-astroimagej.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,400..800;1,62..125,400..800&family=Spectral:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23fafbfc'/%3E%3Crect x='9' y='0' width='2' height='32' fill='%23cf3f37'/%3E%3Ctext x='14' y='23' font-family='Arial' font-weight='700' font-size='17' fill='%2315233f'%3EK%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="sheet">
+
+  <header class="masthead">
+    <a class="initials" href="#top">K. Ludwig</a>
+    <nav aria-label="Sections">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <a class="out" href="https://github.com/keatonl2/keatonl2.github.io">Source on GitHub</a>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- Hero -->
+    <section class="leaf" id="top" style="border-top:0">
+      <div class="note" aria-hidden="true"></div>
+      <div class="body">
+        <div class="hero">
+          <div>
+            <h1>Keaton<br>Ludwig</h1>
+            <p class="lead">I came to data science through physics. I check the data before I trust it, test a pattern against chance before I believe it, and report every result with its uncertainty.</p>
+            <ul class="creds">
+              <li>Graduate student in Data Science, Bellevue University</li>
+              <li>Undergraduate physics research, Hastings College</li>
+            </ul>
+            <div class="actions">
+              <a class="btn solid" href="#projects">See the projects</a>
+              <a class="btn" href="https://github.com/keatonl2">GitHub profile</a>
+            </div>
+          </div>
+          <figure class="specimen">
+            <img src="assets/img/binary-star-astroimagej.png" alt="Telescope image of two stars, with apertures and the measured separation and angle drawn on in AstroImageJ" width="578" height="608">
+            <figcaption>Binary star WDS 20136+5307 as I measured it in 2020: separation <b>5.21″ ± 0.05″</b>, position angle <b>105.63° ± 0.15°</b>. It became my first peer-reviewed paper.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="leaf" id="about" aria-labelledby="about-h">
+      <div class="note"><span>About</span></div>
+      <div class="body">
+        <h2 id="about-h">A physicist's habits, applied to data</h2>
+        <div class="prose">
+          <p>My background is experimental physics. At Hastings College I designed and built a wireless power system with a calculated 82% transfer efficiency for my senior project, and I co-authored a peer-reviewed paper measuring a binary star system with a robotic telescope. That work taught me to treat every number as a measurement: it has a source, an error, and a limit to what it can tell you.</p>
+          <p>As a graduate student in data science at Bellevue University, I have applied that same discipline to larger and messier data: 1.6 million liquor transactions, 17,000 lottery drawings, a decade of county childcare prices, and insurance records. The projects below are grouped by the kind of evidence they give, from scientific research to predictive modeling and generative AI.</p>
+        </div>
+
+        <ul class="habits">
+          <li>
+            <h3>Check the data first</h3>
+            <p>Before modeling Iowa liquor demand, I found and removed 364,000 exact duplicate records that would have taught every model a demand spike that never happened.</p>
+          </li>
+          <li>
+            <h3>Test the pattern against chance</h3>
+            <p>"Hot" lottery numbers look convincing on a chart. Chi-square tests and 1,500 simulated fair draws show they are what randomness produces.</p>
+          </li>
+          <li>
+            <h3>Build for the reader</h3>
+            <p>An infographic for a general audience, a filterable dashboard for policy readers, and slides that explain models in dollars as well as R².</p>
+          </li>
+        </ul>
+
+        <dl class="toolkit">
+          <dt>Languages and libraries</dt>
+          <dd>Python, pandas, scikit-learn, matplotlib, Plotly, HTML/CSS/JavaScript</dd>
+          <dt>Modeling</dt>
+          <dd>Linear and Poisson regression, random forests, gradient boosting, Croston-SBA for intermittent demand, time-aware validation</dd>
+          <dt>Statistics</dt>
+          <dd>Hypothesis testing, chi-square goodness of fit, Monte Carlo simulation, kernel density estimation, error and uncertainty analysis</dd>
+          <dt>Communication</dt>
+          <dd>Dashboards, infographics, slide decks, and peer-reviewed writing</dd>
+          <dt>Scientific tools</dt>
+          <dd>AstroImageJ, Gaia and Washington Double Star Catalog data, laboratory measurement</dd>
+        </dl>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="leaf" id="projects" aria-labelledby="projects-h">
+      <div class="note"><span>Projects</span></div>
+      <div class="body">
+        <h2 id="projects-h">Nine projects, one competency each</h2>
+        <div class="prose">
+          <p>Each project leads with its key result. Every one links to a README in the repository with the problem, data source, methods, tools, and how to run or view it.</p>
+        </div>
+
+        <!-- Group 1 -->
+        <div class="group">
+          <header>
+            <h3>Scientific foundations</h3>
+            <p>Undergraduate physics research: where I learned to measure, weigh uncertainty, and defend a conclusion.</p>
+          </header>
+
+          <article class="project" id="binary-star">
+            <div class="plate">
+              <span class="value">5.21″<small> ± 0.05″</small></span>
+              <span class="what">separation of the pair. Matching parallax and proper motion show the two stars are physically bound.</span>
+            </div>
+            <div>
+              <h3>Binary Star System Analysis: WDS 20136+5307</h3>
+              <p class="area">Scientific data analysis and research communication<br>Published, <i>Journal of Double Star Observations</i>, 2021</p>
+              <p class="summary">I measured six robotic-telescope images in AstroImageJ, cleaned and weighted almost 200 years of historical observations, and compared the result with Gaia satellite data. The question was whether the two stars orbit each other or only line up from Earth.</p>
+              <dl class="facts">
+                <dt>Data</dt><dd>Las Cumbres Observatory images, U.S. Naval Observatory double-star catalog (1828–2015), Gaia DR2</dd>
+                <dt>Tools</dt><dd>AstroImageJ, Plot Tool, error analysis with ±3σ clipping and weighting</dd>
+              </dl>
+              <ul class="links">
+                <li><a href="projects/binary-star-wds-20136-5307/binary-star-wds-20136-5307-paper.pdf">Read the paper (PDF)</a></li>
+                <li><a href="https://github.com/keatonl2/keatonl2.github.io/tree/main/projects/binary-star-wds-20136-5307">README</a></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project" id="wireless-power">
+            <div class="plate">
+              <span class="value">82.03%</span>
+              <span class="what">power-transfer efficiency, against the commercial Qi standard of 85%. It worked up to a 3.2 cm gap.</span>
+            </div>
+            <div>
+              <h3>Wireless Power Transfer: Designing a Near-Field System</h3>
+              <p class="area">Experimental research and quantitative analysis<br>Senior physics project, 2022</p>
+              <p class="summary">I built a resonant inductive coupling system from salvaged Qi coils and a custom PWM drive circuit, measured its quality and coupling factors, and mapped how efficiency collapses as the coils separate. I also reviewed why far-field power beaming is still held back by interference, efficiency, and cost.</p>
+              <dl class="facts">
+                <dt>Data</dt><dd>Inductance, coupling, and oscilloscope measurements from my build, plus coil datasheets and the literature</dd>
+                <dt>Tools</dt><dd>Oscilloscope, soldered LC and PWM H-bridge circuits, electromagnetic theory, Qi standard</dd>
+              </dl>
+              <ul class="links">
+                <li><a href="projects/wireless-power-transfer/wireless-power-transfer-paper.pdf">Read the paper (PDF)</a></li>
+                <li><a href="https://github.com/keatonl2/keatonl2.github.io/tree/main/projects/wireless-power-transfer">README</a></li>
+              </ul>
+              <figure class="shot"><a href="projects/wireless-power-transfer/wireless-power-transfer-paper.pdf" tabindex="-1" aria-hidden="true"><img src="assets/img/wireless-power-prototype.jpg" alt="" loading="lazy" width="928" height="824" style="object-position:center 55%"></a></figure>
+            </div>
+          </article>
+        </div>
+
+        <!-- Group 2 -->
+        <div class="group">
+          <header>
+            <h3>Analysis and communication</h3>
+            <p>Exploring public data, testing whether patterns are real, and putting findings in front of nontechnical readers.</p>
+          </header>
+
+          <article class="project" id="lottery">
+            <div class="plate">
+              <span class="value">p = 0.94</span>
+              <span class="what">χ² fit to a fair machine over 13,570 Pick 10 drawings. Hot numbers don't stay hot (r = −0.03).</span>
+            </div>
+            <div>
+              <h3>Chasing Luck: Testing Lottery Results for Patterns</h3>
+              <p class="area">Probability and statistical reasoning<br>Interactive report</p>
+              <p class="summary">I tested four popular beliefs (hot numbers, cold numbers, overdue numbers, and repeats) against every published Mega Millions, Powerball, and Pick 10 drawing, using chi-square tests and simulated fair draws. The data has patterns, but none of them predict anything.</p>
+              <dl class="facts">
+                <dt>Data</dt><dd>New York State Open Data: 3,902 jackpot drawings (2002–2024) and 13,570 Pick 10 drawings (1987–2024)</dd>
+                <dt>Tools</dt><dd>Chi-square tests, Monte Carlo simulation, kernel density estimation, HTML/JavaScript</dd>
+              </dl>
+              <ul class="links">
+                <li><a href="projects/lottery-randomness-analysis/">Open the interactive report</a></li>
+                <li><a href="https://github.com/keatonl2/keatonl2.github.io/tree/main/projects/lottery-randomness-analysis">README</a></li>
+              </ul>
+              <figure class="shot live" data-w="1440" data-h="900"><iframe src="projects/lottery-randomness-analysis/index.html" title="Live preview of the lottery report" loading="lazy" tabindex="-1" aria-hidden="true" scrolling="no"></iframe><a class="cover" href="projects/lottery-randomness-analysis/" tabindex="-1" aria-hidden="true"></a></figure>
+            </div>
+          </article>
+
+          <article class="project" id="childcare">
+            <div class="plate">
+              <span class="value">54.3%</span>
+              <span class="what">of median income goes to infant care in Bronx County, NY, against a 7% federal benchmark (2018)</span>
+            </div>
+            <div>
+              <h3>The Geography of Childcare Affordability</h3>
+              <p class="area">Interactive data visualization and dashboard development</p>
+              <p class="summary">A filterable dashboard of county-level childcare prices from 2008 to 2018. Statewide averages hide where the burden is heaviest, so the dashboard shows every reporting county, with filters for year, state, child age, and provider type.</p>
+              <dl class="facts">
+                <dt>Data</dt><dd>National Database of Childcare Prices, U.S. Department of Labor Women's Bureau</dd>
+                <dt>Tools</dt><dd>Plotly choropleth and charts, HTML/JavaScript</dd>
+              </dl>
+              <ul class="links">
+                <li><a href="projects/childcare-affordability-dashboard/">Open the dashboard</a></li>
+                <li><a href="https://github.com/keatonl2/keatonl2.github.io/tree/main/projects/childcare-affordability-dashboard">README</a></li>
+              </ul>
+              <figure class="shot live" data-w="1520" data-h="900"><iframe src="projects/childcare-affordability-dashboard/index.html" title="Live preview of the childcare dashboard" loading="lazy" tabindex="-1" aria-hidden="true" scrolling="no"></iframe><a class="cover" href="projects/childcare-affordability-dashboard/" tabindex="-1" aria-hidden="true"></a></figure>
+            </div>
+          </article>
+
+          <article class="project" id="white-house">
+            <div class="plate">
+              <span class="value">~120K</span>
+              <span class="what">visitors in peak months by 2023, up from a few thousand a month in 2021</span>
+            </div>
+            <div>
+              <h3>White House Visitor Patterns, 2021–2023</h3>
+              <p class="area">Exploratory data analysis and visual storytelling<br>Infographic</p>
+              <p class="summary">I cleaned and explored three years of public visitor records to show when people visit, where they go, and how group sizes vary, then turned the findings into a single-page infographic for a general audience.</p>
+              <dl class="facts">
+                <dt>Data</dt><dd>Publicly released White House visitor records, 2021–2023</dd>
+                <dt>Tools</dt><dd>Python (pandas, matplotlib), infographic layout</dd>
+              </dl>
+              <ul class="links">
+                <li><a href="projects/white-house-visitor-patterns/white-house-visitor-infographic.pdf">View the infographic (PDF)</a></li>
+                <li><a href="https://github.com/keatonl2/keatonl2.github.io/tree/main/projects/white-house-visitor-patterns">README</a></li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <!-- Group 3 -->
+        <div class="group">
+          <header>
+            <h3>Modeling and applied machine learning</h3>
+            <p>Supervised learning and forecasting, evaluated honestly against simpler alternatives.</p>
+          </header>
+
+          <article class="project" id="insurance">
+            <div class="plate">
+              <span class="value">R² 0.86</span>
+              <span class="what">random forest on held-out data. Typical error is $2,560, against $4,181 for linear regression.</span>
+            </div>
+            <div>
+              <h3>Predicting Medical Insurance Charges with Regression</h3>
+              <p class="area">Regression modeling and healthcare analytics</p>
+              <p class="summary">I compared linear regression and a 500-tree random forest on 1,338 insured individuals, using one shared preprocessing pipeline. Smoking status drives about 61% of the forest's predictive power. The write-up also addresses the risk of models like this being used for discriminatory pricing.</p>
+              <dl class="facts">
+                <dt>Data</dt><dd>Kaggle Healthcare (insurance) dataset, 1,338 records, 6 predictors</dd>
+                <dt>Tools</dt><dd>Python, pandas, scikit-learn pipelines, matplotlib</dd>
+              </dl>
+              <ul class="links">
+                <li><a href="https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fkeatonl2.github.io%2Fprojects%2Fmedical-insurance-cost-regression%2Fmedical-insurance-cost-regression-slides.pptx">View the slides</a></li>
+                <li><a href="projects/medical-insurance-cost-regression/medical-insurance-cost-regression-slides.pptx">Download (PowerPoint)</a></li>
+                <li><a href="https://github.com/keatonl2/keatonl2.github.io/tree/main/projects/medical-insurance-cost-regression">README</a></li>
+              </ul>
+              <figure class="shot wide"><a href="https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fkeatonl2.github.io%2Fprojects%2Fmedical-insurance-cost-regression%2Fmedical-insurance-cost-regression-slides.pptx" tabindex="-1" aria-hidden="true"><img src="assets/img/insurance-predicted-vs-actual.png" alt="" loading="lazy" width="1598" height="584"></a></figure>
+            </div>
+          </article>
+
+          <article class="project" id="liquor">
+            <div class="plate">
+              <span class="value">−21%</span>
+              <span class="what">forecast error against carrying last month forward. A simple Croston-SBA baseline matched machine learning.</span>
+            </div>
+            <div>
+              <h3>Forecasting Store-Level Liquor Demand in Iowa</h3>
+              <p class="area">Predictive analytics and forecasting</p>
+              <p class="summary">Can a retailer's purchase history predict what it will buy over the next four weeks? I first found 364,160 duplicate rows that doubled July and August volume. I then compared three baselines with a Poisson GLM, a random forest, and gradient boosting on held-out weeks. The recommendation: plan at the category and store level with an intermittency-aware baseline, and keep machine learning in shadow mode until it beats that baseline.</p>
+              <dl class="facts">
+                <dt>Data</dt><dd>Iowa Liquor Sales 2026 (Iowa Department of Revenue): 1.6 million invoice lines, 2,203 stores, 4,429 products</dd>
+                <dt>Tools</dt><dd>Python, pandas, scikit-learn (Poisson GLM, random forest, gradient boosting), Croston-SBA, WAPE, time-based validation</dd>
+              </dl>
+              <ul class="links">
+                <li><a href="projects/iowa-liquor-demand-forecasting/liquor-demand-forecasting-presentation.pdf">View the presentation (PDF)</a></li>
+                <li><a href="projects/iowa-liquor-demand-forecasting/liquor-demand-forecasting-notebook.pdf">Read the code (notebook PDF)</a></li>
+                <li><a href="https://github.com/keatonl2/keatonl2.github.io/tree/main/projects/iowa-liquor-demand-forecasting">README</a></li>
+              </ul>
+              <figure class="minichart" aria-labelledby="liq-cap">
+                <figcaption id="liq-cap">Forecast error on held-out July–August weeks (WAPE, lower is better)</figcaption>
+                <div class="key"><span class="sw a"></span>Product in store <span class="sw b"></span>Category in store</div>
+                <table>
+                  <tbody>
+                    <tr><th scope="row">Naive, last 4 weeks</th><td><div class="pair"><span class="track"><span class="bar a" style="--v:64.2"></span></span><span class="num">64.2%</span></div><div class="pair"><span class="track"><span class="bar b" style="--v:53.8"></span></span><span class="num">53.8%</span></div></td></tr>
+                    <tr><th scope="row">8-week moving average</th><td><div class="pair"><span class="track"><span class="bar a" style="--v:56.0"></span></span><span class="num">56.0%</span></div><div class="pair"><span class="track"><span class="bar b" style="--v:46.3"></span></span><span class="num">46.3%</span></div></td></tr>
+                    <tr><th scope="row">Croston-SBA</th><td><div class="pair"><span class="track"><span class="bar a" style="--v:50.5"></span></span><span class="num">50.5%</span></div><div class="pair"><span class="track"><span class="bar b" style="--v:41.6"></span></span><span class="num">41.6%</span></div></td></tr>
+                    <tr><th scope="row">Poisson GLM</th><td><div class="pair"><span class="track"><span class="bar a" style="--v:54.0"></span></span><span class="num">54.0%</span></div><div class="pair"><span class="track"><span class="bar b" style="--v:50.1"></span></span><span class="num">50.1%</span></div></td></tr>
+                    <tr><th scope="row">Random forest</th><td><div class="pair"><span class="track"><span class="bar a" style="--v:50.2"></span></span><span class="num">50.2%</span></div><div class="pair"><span class="track"><span class="bar b" style="--v:45.6"></span></span><span class="num">45.6%</span></div></td></tr>
+                    <tr><th scope="row">Gradient boosting</th><td><div class="pair"><span class="track"><span class="bar a" style="--v:50.6"></span></span><span class="num">50.6%</span></div><div class="pair"><span class="track"><span class="bar b" style="--v:44.7"></span></span><span class="num">44.7%</span></div></td></tr>
+                  </tbody>
+                </table>
+              </figure>
+            </div>
+          </article>
+
+          <article class="project" id="genai">
+            <div class="plate pending">
+              <span class="value words">In progress</span>
+              <span class="what">to be added when complete, this term</span>
+            </div>
+            <div>
+              <h3>Generative AI Application</h3>
+              <p class="area">Generative AI applications</p>
+              <p class="summary">My current generative AI project. I will add it once I can document the full problem, implementation, evaluation, and results.</p>
+              <ul class="links">
+                <li><a href="https://github.com/keatonl2/keatonl2.github.io/tree/main/projects/generative-ai-application">README</a></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project" id="applied">
+            <div class="plate pending">
+              <span class="value words">In progress</span>
+              <span class="what">to be added when complete, this term</span>
+            </div>
+            <div>
+              <h3>Applied Data Science Project</h3>
+              <p class="area">Applied, end-to-end project development</p>
+              <p class="summary">My second major applied project, covering the full workflow from framing the question to communicating the result. It will be added when its scope, methods, and results are final.</p>
+              <ul class="links">
+                <li><a href="https://github.com/keatonl2/keatonl2.github.io/tree/main/projects/applied-data-science-project">README</a></li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <aside class="why" aria-labelledby="why-h">
+          <h3 id="why-h">Why nine projects and not ten</h3>
+          <p>Each project stands for one distinct competency, and nine cover the range I want to show, from a physical experiment to generative AI. Any other piece of coursework I could add would repeat a competency already shown here. A tenth project would make the portfolio longer without showing a new skill.</p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="leaf" id="contact" aria-labelledby="contact-h">
+      <div class="note"><span>Contact</span></div>
+      <div class="body">
+        <h2 id="contact-h">Get in touch</h2>
+        <div class="prose">
+          <p>I'm looking for analyst and data scientist roles where careful measurement matters, such as forecasting, healthcare analytics, and public-sector data. I'm glad to walk through any of these projects in more detail.</p>
+        </div>
+        <ul class="reach">
+          <!-- TODO (Keaton): replace the two placeholder links below with your real email and LinkedIn URL. -->
+          <li><span class="k">Email</span><a href="mailto:your.name@example.com">your.name@example.com</a></li>
+          <li><span class="k">LinkedIn</span><a href="https://www.linkedin.com/in/your-profile">linkedin.com/in/your-profile</a></li>
+          <li><span class="k">GitHub</span><a href="https://github.com/keatonl2">github.com/keatonl2</a></li>
+          <!-- TODO (Keaton): add assets/Keaton-Ludwig-Resume.pdf, then uncomment:
+          <li><span class="k">Résumé</span><a href="assets/Keaton-Ludwig-Resume.pdf">Download (PDF)</a></li>
+          -->
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="colophon">
+    <p>Hand-built in HTML and CSS and hosted on GitHub Pages. <a href="https://github.com/keatonl2/keatonl2.github.io">View the source</a> or read the <a href="https://github.com/keatonl2/keatonl2.github.io/blob/main/CLEANUP.md">cleanup log</a>. Updated November 2026.</p>
+  </footer>
+
+</div>
+<script>
+  // Scale live previews of the interactive projects to fit their frame.
+  (function () {
+    var frames = document.querySelectorAll('.shot.live');
+    function fit() {
+      frames.forEach(function (f) {
+        var w = +f.dataset.w, h = +f.dataset.h, s = f.clientWidth / w;
+        var i = f.querySelector('iframe');
+        i.style.width = w + 'px'; i.style.height = h + 'px'; i.style.transform = 'scale(' + s + ')';
+        f.style.height = Math.round(h * s * 0.75) + 'px';
+      });
+    }
+    fit(); window.addEventListener('resize', fit);
+  })();
+</script>
+</body>
+</html>
