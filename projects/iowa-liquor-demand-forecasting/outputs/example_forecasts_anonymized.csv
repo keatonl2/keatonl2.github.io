@@ -1,0 +1,9 @@
+Store (anon.),Product (anon.),Actual,Naive,Gradient boosting (Poisson)
+Store 1,Product 1,5664.0,4464.0,4568.6
+Store 2,Product 2,4044.0,5340.0,5004.3
+Store 3,Product 3,3960.0,1080.0,1385.4
+Store 4,Product 4,3240.0,1080.0,1855.0
+Store 4,Product 3,2880.0,360.0,2179.5
+Store 5,Product 2,2580.0,2520.0,2921.4
+Store 6,Product 2,2040.0,1440.0,1520.3
+Store 7,Product 5,2016.0,1344.0,745.7

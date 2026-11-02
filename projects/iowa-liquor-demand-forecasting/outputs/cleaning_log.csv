@@ -1,0 +1,14 @@
+step,count
+Rows as delivered,1968354
+Exact duplicate rows removed,364160
+Rows after de-duplication,1604194
+Rows missing store geography,2365
+  ...filled from same store's other rows,1622
+  ...left as UNKNOWN,743
+Rows missing category,26
+  ...filled from same item's other rows,0
+  ...left as UNKNOWN,26
+"Negative-bottle lines (returns/adjustments, kept and netted)",1247
+  ...bottles on those lines,-13234
+Zero-cost lines (kept),42
+Repeated invoice-item lines (kept),1931

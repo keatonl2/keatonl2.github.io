@@ -1,0 +1,28 @@
+feature,importance,std,family
+sum_8w,16.41622980816625,0.07679311024384922,Series recency & frequency
+active_8w,3.3331680818790828,0.040187235703818276,Series recency & frequency
+active_rate_hist,1.4696094548407679,0.05924069753767358,Series recency & frequency
+trend_4w,0.5032133399418584,0.04264916538304312,Series recency & frequency
+lag_1,0.44888692818294124,0.005302865571853072,Series recency & frequency
+level_stores_4w,0.3595315368196591,0.035828319170538,Product market activity
+std_8w,0.2851108679186865,0.007364857744254021,Series recency & frequency
+active_4w,0.19648748931813104,0.027257830875598344,Series recency & frequency
+level_sum_4w,0.18930390698657326,0.05742887445040288,Product market activity
+category_id,0.15840082153980148,0.14357699548426167,Product attributes (static)
+store_active_8w,0.11091846683338176,0.007030145905628656,Store context
+pack,0.07649038157833843,0.016421722557752216,Product attributes (static)
+store_trend_4w,0.05921394915917979,0.021678480177457393,Store context
+store_sum_4w,0.025025843769718392,0.032482087050792426,Store context
+weeks_since_last,0.018081675362738636,0.004753868876475961,Series recency & frequency
+lag_4,0.0027177199898950734,0.0080191619308935,Series recency & frequency
+target_month,0.0,0.0,Calendar
+holidays_in_target,0.0,0.0,Calendar
+mean_8w,0.0,0.0,Series recency & frequency
+retail_price,-0.003899009127765041,0.03948353195171522,Product attributes (static)
+bottle_volume_ml,-0.023422682061418242,0.018841988486155186,Product attributes (static)
+county_store_count,-0.038848093570468124,0.06385911083766,Store context
+sum_4w,-0.06225099854328384,0.013427675817653853,Series recency & frequency
+lag_2,-0.11850951806063534,0.0026774943731814084,Series recency & frequency
+lag_3,-0.1534214410056407,0.020239180313943596,Series recency & frequency
+store_sum_8w,-0.18605867783772895,0.026286676843822628,Store context
+mean_when_active_8w,-0.19746424383634284,0.022212011073785308,Series recency & frequency

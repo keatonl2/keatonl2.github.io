@@ -6,7 +6,10 @@ A forecasting study that predicts how many bottles each Iowa retailer will buy o
 |---|---|
 | **Competency area** | Predictive analytics and forecasting |
 | **Presentation** | [liquor-demand-forecasting-presentation.pdf](liquor-demand-forecasting-presentation.pdf) (14 slides) |
-| **Code** | [liquor-demand-forecasting-notebook.pdf](liquor-demand-forecasting-notebook.pdf) (full Jupyter notebook with outputs, exported to PDF) |
+| **Code** | [liquor-demand-forecasting.ipynb](liquor-demand-forecasting.ipynb) (full notebook, run top to bottom with saved outputs) · [PDF export](liquor-demand-forecasting-notebook.pdf) |
+| **White paper** | [liquor-demand-forecasting-white-paper.pdf](liquor-demand-forecasting-white-paper.pdf) |
+
+![Forecast error by method on held-out weeks](figures/fig3_model_comparison.png)
 
 ## Problem
 
@@ -59,15 +62,25 @@ Python, pandas, NumPy, scikit-learn (`PoissonRegressor`, `RandomForestRegressor`
 
 ## How to run
 
-The notebook is included as a PDF export with every cell's code and output, so the full workflow can be read without running anything.
-
-<!-- TODO (Keaton): add the source notebook as `liquor-demand-forecasting.ipynb` (plus a requirements.txt) so it can be rerun. -->
+The notebook was run top to bottom (cells 1–25 in order), and GitHub shows every cell's code and output, so you can read the whole workflow without running anything.
 
 To reproduce it:
 
-1. Download Iowa Liquor Sales 2026 (dataset 1263) from the Iowa Data Hub as CSV parts named `iowa_liquor_sales_2026_1263_rows_part_*.csv`.
-2. `pip install pandas numpy scikit-learn matplotlib jupyter`
-3. Run the notebook top to bottom. All tunable settings are in the first cell, and the outputs (cleaning log, coverage tables, cross-validation folds) are written to an output folder.
+1. Download Iowa Liquor Sales 2026 (dataset 1263) from the Iowa Data Hub as CSV parts named `iowa_liquor_sales_2026_1263_rows_part_*.csv` and put them in this folder. The raw data (about 430 MB) is not committed.
+2. `pip install -r requirements.txt`
+3. Open `liquor-demand-forecasting.ipynb` and run all cells. All tunable settings are in the setup cell.
+
+### Files in this folder
+
+| Path | What it is |
+|---|---|
+| `liquor-demand-forecasting.ipynb` | Full analysis: cleaning, aggregation, features, models, validation, figures |
+| `outputs/` | Tables the notebook writes: cleaning log, duplicates by month, eligibility coverage, cross-validation folds, test metrics, error by segment, permutation importance, anonymized example forecasts |
+| `figures/` | Charts used in the white paper and slides |
+| `liquor-demand-forecasting-white-paper.pdf` | Final white paper |
+| `liquor-demand-forecasting-presentation.pdf` | Final presentation slides |
+| `liquor-demand-forecasting-notebook.pdf` | PDF export of the notebook |
+| `requirements.txt` | Python packages needed to rerun it |
 
 ## Limitations and ethics
 

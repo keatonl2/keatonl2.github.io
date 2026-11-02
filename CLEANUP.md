@@ -12,7 +12,7 @@ This log records what was broken, fixed, renamed, archived, or removed when I re
 | The insurance deck could only be opened with PowerPoint. | Medical insurance project | Linked the deck through Microsoft's free online viewer, so it opens in any browser. The `.pptx` download keeps the speaker notes. |
 | File names had spaces and course wording (`Chasing Luck - Lottery Data Project.html`), which break or uglify URLs on GitHub Pages. | All deliverables | Renamed to lowercase, hyphenated, subject-based names (see below). |
 | README headings named the **competency area** ("Scientific Data Analysis and Research Communication") instead of the project. | Binary star and wireless power READMEs | Retitled by subject or method ("Binary Star System Analysis: WDS 20136+5307"). The competency area moved into a table under the title. Course numbers were removed from every heading. |
-| The liquor forecasting project had a description but no deliverable or code in the repo. | Iowa liquor project | Added the final presentation and the full notebook (PDF), plus the held-out error table, in the README. The two PDFs went up in a separate first commit and were then moved into the project folder. The original files were staged on a temporary branch, copied into place, and that branch was deleted. |
+| The liquor forecasting project had a description but no deliverable or code in the repo. | Iowa liquor project | Added the final presentation, the white paper, the full Jupyter notebook (with its saved outputs, the output tables, and figures), a `requirements.txt`, and the held-out error table in the README. The notebook's course-code header was replaced with the project title. The two PDFs went up in a separate first commit and were then moved into the project folder. The original files were staged on a temporary branch, copied into place, and that branch was deleted. |
 | The two existing READMEs had no data source, tools, or run instructions, and the wireless power README had no result. | Same | Rewrote every project README to one template: problem, data, methods, key result, tools, how to run or view, and limitations. Added the wireless power paper and its measured results (Q = 162.2, k = 0.202, PTE 82.03%, 3.2 cm working gap). |
 
 ## Known issues
@@ -54,8 +54,7 @@ These files stay in my local course folder and are not uploaded to this reposito
 
 ## Still to add
 
-- [ ] Analysis notebook for the medical insurance project (code lives in my course folders)
-- [ ] Source `.ipynb` for the liquor forecasting project, so it can be rerun (the full notebook is already included as a PDF)
-- [ ] Re-export the liquor slides and notebook without the course code
+- [ ] Analysis notebook for the medical insurance project
+- [ ] Re-export the liquor slides and notebook PDF without the course code
 - [ ] Generative AI project and second applied project when they are complete
-- [ ] Email and LinkedIn links in the Contact section, and a résumé PDF
+- [ ] Résumé PDF for the Contact section

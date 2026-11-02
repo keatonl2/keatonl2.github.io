@@ -1,0 +1,7 @@
+Method,Type,MAE,RMSE,WAPE_%,R2,Bias_%,Rel_MAE_vs_naive
+Naive (last 4 wks),Baseline,46.719,142.91,53.808,0.645,8.49,1.0
+8-wk moving avg,Baseline,40.217,122.437,46.32,0.739,8.726,0.861
+Croston-SBA,Baseline,36.134,112.618,41.617,0.779,0.406,0.773
+Poisson GLM,Model,43.49,120.738,50.089,0.746,20.287,0.931
+Random forest,Model,39.591,126.86,45.598,0.72,10.533,0.847
+Gradient boosting (Poisson),Model,38.807,121.059,44.696,0.745,8.194,0.831
