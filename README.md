@@ -3,7 +3,7 @@
 **Portfolio site:** [keatonl2.github.io](https://keatonl2.github.io)
 **Repository:** [github.com/keatonl2/keatonl2.github.io](https://github.com/keatonl2/keatonl2.github.io)
 
-I came to data science through physics, and I still work like an experimentalist: check the data before trusting it, test a pattern against chance before believing it, and report a result together with its uncertainty. This repository holds my graduate portfolio, nine projects organized by the competency each one demonstrates. It is also the source of the GitHub Pages site linked above.
+I came to data science through physics, and I still work like an experimentalist: check the data before trusting it, test a pattern against chance before believing it, and report a result together with its uncertainty. This repository holds my graduate portfolio, ten projects organized by the competency each one demonstrates. It is also the source of the GitHub Pages site linked above.
 
 ## Projects
 
@@ -17,13 +17,10 @@ I came to data science through physics, and I still work like an experimentalist
 | [Predicting Medical Insurance Charges](projects/medical-insurance-cost-regression/) | Regression modeling and healthcare analytics | Random forest test R² 0.86 and MAE $2,560 (linear: 0.78, $4,181). Smoking is the top driver | [Slides](projects/medical-insurance-cost-regression/medical-insurance-cost-regression-slides.pptx) · [Code](projects/medical-insurance-cost-regression/medical-insurance-cost-regression.ipynb) |
 | [Forecasting Store-Level Liquor Demand in Iowa](projects/iowa-liquor-demand-forecasting/) | Predictive analytics and forecasting | 21% less error than naive (WAPE 50.6% vs 64.2%). A simple Croston-SBA baseline matched machine learning. 364K duplicate rows removed | [Slides](projects/iowa-liquor-demand-forecasting/liquor-demand-forecasting-presentation.pdf) · [Code](projects/iowa-liquor-demand-forecasting/liquor-demand-forecasting.ipynb) |
 | [Prescription Sig Translator: Fine-Tuning a Small Language Model for Pharmacy Safety](projects/prescription-sig-translator/) | Generative AI applications | Full fine-tune of Qwen2.5-0.5B cut critical errors from 41 to 3 on held-out sigs (flag F1 0.38 → 0.88). Streamlit app adds a rule-based safety check | [Slides](projects/prescription-sig-translator/presentation/prescription-sig-translator-presentation.pdf) · [Code](projects/prescription-sig-translator/prescription-sig-translator-fine-tuning.ipynb) · [App](projects/prescription-sig-translator/app.py) |
+| [Wikipedia RAG Chatbot: Grounding a Small Language Model in Retrieved Text](projects/wikipedia-rag-chatbot/) | Retrieval systems and language-model evaluation | 90% of questions answered correctly with retrieval vs 0% for the same model from memory; retrieval found the answer 100% of the time | [Code](projects/wikipedia-rag-chatbot/wikipedia-rag-chatbot.ipynb) |
 | [Go For It: Predicting NFL Fourth-Down Conversions and Evaluating Coaching Decisions](projects/nfl-fourth-down-decisions/) | Applied, end-to-end project development | Confident fourth-down mistakes fell from 19.6% (2016) to 15.0% (2025); 88.7% were kicks when going was better. XGBoost barely beat a distance-only table (Brier 0.2267 vs 0.2295) | [White paper](projects/nfl-fourth-down-decisions/nfl-fourth-down-white-paper.pdf) · [Code](projects/nfl-fourth-down-decisions/nfl-fourth-down-decisions.ipynb) |
 
 Every project folder has a README with the same sections: problem, data source, methods, key result, tools, how to run or view, and limitations.
-
-## Why nine projects instead of ten
-
-Each project in this portfolio stands for **one distinct competency**, and nine competencies cover the range of work I want to show, from physical experiment to generative AI. Every other candidate from my coursework would have repeated a competency already shown here, such as another dashboard or another regression model. A tenth project would have made the portfolio longer without adding evidence of a new skill.
 
 ## Repository layout
 
@@ -42,7 +39,8 @@ Each project in this portfolio stands for **one distinct competency**, and nine 
 │   ├── medical-insurance-cost-regression/
 │   ├── iowa-liquor-demand-forecasting/
 │   ├── nfl-fourth-down-decisions/
-│   └── prescription-sig-translator/        # Streamlit app + fine-tuning notebook
+│   ├── prescription-sig-translator/        # Streamlit app + fine-tuning notebook
+│   └── wikipedia-rag-chatbot/
 ├── CLEANUP.md                 # what was fixed, renamed, archived, and still to add
 └── README.md
 ```

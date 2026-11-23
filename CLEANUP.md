@@ -20,6 +20,8 @@ This log records what was broken, fixed, renamed, archived, or removed when I re
 | The second applied project was a placeholder marked "in progress". | `projects/applied-data-science-project/` | Replaced with the finished NFL fourth-down project in `projects/nfl-fourth-down-decisions/`: notebook with saved outputs, figures, white paper, audience Q&A, slides, and narrated deck, plus a README in the standard template. The placeholder folder was deleted. |
 | The fourth-down notebook, white paper, Q&A, and slides named the course (**DSC680**, "Milestone 3"). | `nfl-fourth-down-decisions/` | Removed the course and instructor lines from the white paper and Q&A title pages, changed the notebook's header and section 6 heading, and replaced the course text on the deck's title slide, closing slide, footer layout, and the first slide's speaker notes. The deck's recorded narration was kept. |
 | The narrated deck is 18 MB and needs PowerPoint to play. | `nfl-fourth-down-decisions/` | Added a 0.5 MB PDF of the slides (narration removed) for viewing in any browser. |
+| The portfolio had nine projects and a section explaining why it had nine instead of ten. | Site and root README | Added a tenth project, the Wikipedia RAG chatbot, which shows a competency the others don't (retrieval systems and language-model evaluation). Removed the "why nine" sections and changed the heading to "Ten projects, one competency each". |
+| The RAG notebook's first cell printed the course code (**DSC670-T301**, "Assignment 5.2"), its scraper's user-agent string named the course, and one output held an expired Gradio share link. | `wikipedia-rag-chatbot/` | Replaced the header with the project title, renamed the user-agent string, and blanked the link. No logic or results changed. |
 | The two existing READMEs had no data source, tools, or run instructions, and the wireless power README had no result. | Same | Rewrote every project README to one template: problem, data, methods, key result, tools, how to run or view, and limitations. Added the wireless power paper and its measured results (Q = 162.2, k = 0.202, PTE 82.03%, 3.2 cm working gap). |
 
 ## Known issues
@@ -49,6 +51,7 @@ This log records what was broken, fixed, renamed, archived, or removed when I re
 | `Ludwig_Milestone3_FinalWhitePaper.pdf` | `projects/nfl-fourth-down-decisions/nfl-fourth-down-white-paper.pdf` |
 | `Ludwig_Milestone3_QA.pdf` | `projects/nfl-fourth-down-decisions/nfl-fourth-down-audience-qa.pdf` |
 | `Ludwig_Milestone3_Presentation.pptx` | `projects/nfl-fourth-down-decisions/nfl-fourth-down-presentation.pptx` |
+| `LudwigK_Assignment5_2.ipynb` | `projects/wikipedia-rag-chatbot/wikipedia-rag-chatbot.ipynb` |
 | `applied-data-science-project/` (placeholder) | `projects/nfl-fourth-down-decisions/` |
 | `generative-ai-application/` (placeholder) | `projects/prescription-sig-translator/` |
 | `Predicting Medical Insurance.pptx` | `projects/medical-insurance-cost-regression/medical-insurance-cost-regression-slides.pptx` |
@@ -72,8 +75,9 @@ These files stay in my local course folder and are not uploaded to this reposito
 ## Added
 
 - `index.html` and `assets/`: the GitHub Pages portfolio site (About, Projects, Contact)
-- `README.md`: repository overview, project index, and the reason this portfolio has nine projects
+- `README.md`: repository overview and project index
 - `projects/prescription-sig-translator/` and `projects/nfl-fourth-down-decisions/`: the two most recent projects, which replaced the in-progress placeholders
+- `projects/wikipedia-rag-chatbot/`: the tenth project
 - `assets/img/`: figures taken directly from each project's own deliverable (the star image from the published paper, the prototype photo from the wireless power paper, and the model diagnostics chart from the insurance deck). The two interactive projects get live previews on the site instead of screenshots.
 
 ## Still to add

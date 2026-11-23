@@ -6,7 +6,7 @@
   <title>Keaton Ludwig · Data Science Portfolio</title>
   <meta name="description" content="Data science portfolio of Keaton Ludwig: physics-trained analyst working in forecasting, regression, statistical testing, and interactive visualization.">
   <meta property="og:title" content="Keaton Ludwig · Data Science Portfolio">
-  <meta property="og:description" content="Nine projects, from a peer-reviewed binary star study to a fine-tuned language model for pharmacy safety.">
+  <meta property="og:description" content="Ten projects, from a peer-reviewed binary star study to a fine-tuned language model for pharmacy safety.">
   <meta property="og:image" content="https://keatonl2.github.io/assets/img/binary-star-astroimagej.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -83,7 +83,7 @@
 
         <dl class="toolkit">
           <dt>Languages and libraries</dt>
-          <dd>Python, pandas, scikit-learn, PyTorch, Hugging Face Transformers, Streamlit, matplotlib, Plotly, HTML/CSS/JavaScript</dd>
+          <dd>Python, pandas, scikit-learn, PyTorch, Hugging Face Transformers, sentence-transformers, FAISS, Streamlit, Gradio, matplotlib, Plotly, HTML/CSS/JavaScript</dd>
           <dt>Modeling</dt>
           <dd>Linear and Poisson regression, random forests, gradient boosting, Croston-SBA for intermittent demand, time-aware validation, XGBoost with monotonic constraints, full fine-tuning of language models</dd>
           <dt>Statistics</dt>
@@ -100,7 +100,7 @@
     <section class="leaf" id="projects" aria-labelledby="projects-h">
       <div class="note"><span>Projects</span></div>
       <div class="body">
-        <h2 id="projects-h">Nine projects, one competency each</h2>
+        <h2 id="projects-h">Ten projects, one competency each</h2>
         <div class="prose">
           <p>Each project leads with its key result. Every one links to a README in the repository with the problem, data source, methods, tools, and how to run or view it.</p>
         </div>
@@ -313,6 +313,36 @@
             </div>
           </article>
 
+          <article class="project" id="rag-chatbot">
+            <div class="plate">
+              <span class="value">90%<small> vs 0%</small></span>
+              <span class="what">of questions answered correctly with retrieval, against the same model answering from memory.</span>
+            </div>
+            <div>
+              <h3>Wikipedia RAG Chatbot: Grounding a Small Language Model in Retrieved Text</h3>
+              <p class="area">Retrieval systems and language-model evaluation</p>
+              <p class="summary">Small language models run cheaply on local hardware, but they invent facts. I built a retrieval-augmented chatbot over the Nebraska Cornhuskers football Wikipedia article: scraped and cleaned the page, split it into section-labeled chunks, retrieved the best four with sentence embeddings and FAISS, and had Qwen2.5-1.5B answer only from them, citing its sections. I tested retrieval on its own before adding the model, then scored both against a no-retrieval baseline. The baseline didn't say "I don't know." It confidently named the wrong Heisman winner. Follow-up questions are where it still breaks, and the notebook shows why.</p>
+              <dl class="facts">
+                <dt>Data</dt><dd>Wikipedia article "Nebraska Cornhuskers football" (CC BY-SA): 29 sections, 79 labeled chunks</dd>
+                <dt>Tools</dt><dd>Python, Beautiful Soup, sentence-transformers, FAISS, Hugging Face Transformers (Qwen2.5-1.5B-Instruct), Gradio</dd>
+              </dl>
+              <ul class="links">
+                <li><a href="https://github.com/keatonl2/keatonl2.github.io/blob/main/projects/wikipedia-rag-chatbot/wikipedia-rag-chatbot.ipynb">Read the code (Jupyter notebook)</a></li>
+                <li><a href="https://github.com/keatonl2/keatonl2.github.io/tree/main/projects/wikipedia-rag-chatbot">README</a></li>
+              </ul>
+              <figure class="minichart" aria-labelledby="rag-cap">
+                <figcaption id="rag-cap">Evaluation on 10 answerable questions about the article</figcaption>
+                <table>
+                  <tbody>
+                    <tr><th scope="row">Retrieval hit (answer in top 4 chunks)</th><td><div class="pair"><span class="track"><span class="bar a" style="--v:70"></span></span><span class="num">100%</span></div></td></tr>
+                    <tr><th scope="row">Correct, with retrieval</th><td><div class="pair"><span class="track"><span class="bar a" style="--v:63"></span></span><span class="num">90%</span></div></td></tr>
+                    <tr><th scope="row">Correct, same model without retrieval</th><td><div class="pair"><span class="track"><span class="bar b" style="--v:0"></span></span><span class="num">0%</span></div></td></tr>
+                  </tbody>
+                </table>
+              </figure>
+            </div>
+          </article>
+
           <article class="project" id="fourth-down">
             <div class="plate">
               <span class="value">15.0%</span>
@@ -337,10 +367,7 @@
           </article>
         </div>
 
-        <aside class="why" aria-labelledby="why-h">
-          <h3 id="why-h">Why nine projects and not ten</h3>
-          <p>Each project stands for one distinct competency, and nine cover the range I want to show, from a physical experiment to a fine-tuned language model. Any other piece of coursework I could add would repeat a competency already shown here. A tenth project would make the portfolio longer without showing a new skill.</p>
-        </aside>
+
       </div>
     </section>
 
