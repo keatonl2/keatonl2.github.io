@@ -17,14 +17,14 @@ This log records what was broken, fixed, renamed, archived, or removed when I re
 | The fine-tuning notebook's first cell printed the course code and term-project heading (**DSC670-T301**, "Term Project - Milestone 3"), and the app's browser-tab title and code comments named the course. | `prescription-sig-translator/` | Replaced the notebook header with the project title, retitled "What's next (Milestone 4)" to "What's next", and removed the course code from the app's page title and docstrings. No code logic was changed. |
 | The project's slide deck was built for the course, with the course code in the footer and on the title slide. | `prescription-sig-translator/presentation/` | Rebuilt the deck from its script without the course code and added a PDF export so it opens in any browser. |
 | The medical insurance project had slides but no code. | `medical-insurance-cost-regression/` | Found the original notebook (`Ludwig_Keaton_Milestone4_PythonCode.ipynb`, in Downloads) and added it with its saved outputs, which match the README exactly (random forest R² 0.8635, MAE $2,560). Replaced its course-code header (**DSC630-T302**, "Milestone 4") with the project title, added a `requirements.txt`, and replaced the README's TODO with run steps. |
-| The second applied project was a placeholder marked "in progress". | `projects/applied-data-science-project/` | Replaced with the finished NFL fourth-down project in `projects/nfl-fourth-down-decisions/`: notebook with saved outputs, figures, white paper, audience Q&A, slides, narrated deck, and video, plus a README in the standard template. The placeholder folder was deleted. |
+| The second applied project was a placeholder marked "in progress". | `projects/applied-data-science-project/` | Replaced with the finished NFL fourth-down project in `projects/nfl-fourth-down-decisions/`: notebook with saved outputs, figures, white paper, audience Q&A, slides, and narrated deck, plus a README in the standard template. The placeholder folder was deleted. |
 | The fourth-down notebook, white paper, Q&A, and slides named the course (**DSC680**, "Milestone 3"). | `nfl-fourth-down-decisions/` | Removed the course and instructor lines from the white paper and Q&A title pages, changed the notebook's header and section 6 heading, and replaced the course text on the deck's title slide, closing slide, footer layout, and the first slide's speaker notes. The deck's recorded narration was kept. |
-| The narrated deck is 18 MB and needs PowerPoint to play. | `nfl-fourth-down-decisions/` | Added a 0.5 MB PDF of the slides (narration removed) for viewing in any browser, and the narrated video. |
+| The narrated deck is 18 MB and needs PowerPoint to play. | `nfl-fourth-down-decisions/` | Added a 0.5 MB PDF of the slides (narration removed) for viewing in any browser. |
 | The two existing READMEs had no data source, tools, or run instructions, and the wireless power README had no result. | Same | Rewrote every project README to one template: problem, data, methods, key result, tools, how to run or view, and limitations. Added the wireless power paper and its measured results (Q = 162.2, k = 0.202, PTE 82.03%, 3.2 cm working gap). |
 
 ## Known issues
 
-- The fourth-down narrated video and the recorded narration in its deck still mention the course (DSC680), and the video shows the old slide footer. Re-exporting the video from the updated deck (File > Export > Create a Video) would fix the slides but not the spoken line.
+- The recorded narration in the fourth-down deck still mentions the course (DSC680) in its first line. The slide text and notes were updated, but the audio can only be changed by re-recording.
 - The liquor forecasting slides and notebook PDF still print the course code (DSC680) in their headers and footers. These are exported PDFs, so the code can't be removed without re-exporting from the source files.
 - The childcare dashboard loads its county map shapes from Plotly's public CDN. On the live site this just works. If you open the downloaded `index.html` with no internet connection, the map area stays blank while the rest of the page still loads. This is noted in that project's README.
 
@@ -49,7 +49,6 @@ This log records what was broken, fixed, renamed, archived, or removed when I re
 | `Ludwig_Milestone3_FinalWhitePaper.pdf` | `projects/nfl-fourth-down-decisions/nfl-fourth-down-white-paper.pdf` |
 | `Ludwig_Milestone3_QA.pdf` | `projects/nfl-fourth-down-decisions/nfl-fourth-down-audience-qa.pdf` |
 | `Ludwig_Milestone3_Presentation.pptx` | `projects/nfl-fourth-down-decisions/nfl-fourth-down-presentation.pptx` |
-| `Ludwig_Milestone3_Presentation.mp4` | `projects/nfl-fourth-down-decisions/nfl-fourth-down-presentation-video.mp4` |
 | `applied-data-science-project/` (placeholder) | `projects/nfl-fourth-down-decisions/` |
 | `generative-ai-application/` (placeholder) | `projects/prescription-sig-translator/` |
 | `Predicting Medical Insurance.pptx` | `projects/medical-insurance-cost-regression/medical-insurance-cost-regression-slides.pptx` |
@@ -65,7 +64,7 @@ Interactive pages are named `index.html` inside their own folders, so each one h
 
 | `sig_translator_qwen05b_full_ft/` (fine-tuned model, about 2 GB) and `checkpoints/` | Too large for GitHub. The notebook recreates the model, and the README explains how to run the app with it. |
 | `Ludwig_Keaton_Milestone4_v2_retrain.ipynb` | An unrun retraining plan, not a finished result. |
-| Fourth-down `.docx` sources and `Ludwig_Milestone3_SpeakerNotes.txt` | Editable sources of the published PDFs and the narration script. The PDFs and deck notes carry the same content. |
+| Fourth-down `.docx` sources, `Ludwig_Milestone3_SpeakerNotes.txt`, and the narrated video (`.mp4`) | Editable sources of the published PDFs, the narration script, and a video copy of the narrated deck. The PDFs and the deck carry the same content. |
 | `app_draft.py` | First draft of the app, superseded by `app.py`. Its consistency check was merged into `sig_engine.py`. |
 
 These files stay in my local course folder and are not uploaded to this repository.
@@ -81,7 +80,6 @@ These files stay in my local course folder and are not uploaded to this reposito
 
 - [x] Analysis notebook for the medical insurance project
 - [ ] Re-export the liquor slides and notebook PDF without the course code
-- [ ] Re-export the fourth-down video from the updated deck (optional; the narration will still mention the course)
 - [x] Generative AI project (added as the prescription sig translator)
 - [x] Second applied project (added as the NFL fourth-down study)
 - [ ] Résumé PDF for the Contact section

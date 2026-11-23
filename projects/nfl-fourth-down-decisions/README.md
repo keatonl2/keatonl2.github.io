@@ -6,7 +6,7 @@ An end-to-end study of the most second-guessed call in football. It predicts whe
 |---|---|
 | **Competency area** | Applied, end-to-end data science project development |
 | **White paper** | [nfl-fourth-down-white-paper.pdf](nfl-fourth-down-white-paper.pdf) (17 pages) |
-| **Presentation** | [Slides (PDF)](nfl-fourth-down-slides.pdf) · [PowerPoint with recorded narration](nfl-fourth-down-presentation.pptx) · [Narrated video, 8 minutes (MP4)](nfl-fourth-down-presentation-video.mp4) |
+| **Presentation** | [Slides (PDF)](nfl-fourth-down-slides.pdf) · [PowerPoint with recorded narration](nfl-fourth-down-presentation.pptx) |
 | **Audience Q&A** | [nfl-fourth-down-audience-qa.pdf](nfl-fourth-down-audience-qa.pdf) (answers to the ten questions an audience would most likely ask) |
 | **Code** | [nfl-fourth-down-decisions.ipynb](nfl-fourth-down-decisions.ipynb) (full analysis, run top to bottom with saved outputs) |
 
@@ -77,7 +77,6 @@ To reproduce it:
 | `nfl-fourth-down-white-paper.pdf` | Final white paper |
 | `nfl-fourth-down-slides.pdf` | Presentation slides |
 | `nfl-fourth-down-presentation.pptx` | The same slides with recorded narration and speaker notes |
-| `nfl-fourth-down-presentation-video.mp4` | Narrated presentation as a video |
 | `nfl-fourth-down-audience-qa.pdf` | Answers to ten audience questions |
 | `requirements.txt` | Python packages needed to rerun it |
 
