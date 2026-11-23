@@ -1,0 +1,9 @@
+run,inputs,valid_output_%,correct_or_caught_%,critical_errors,flag_recall_%,false_flag_%
+held-out test | 1. Lookup table,85,100.0,78.8,18,0.0,0.0
+M2 suite | 1. Lookup table,28,100.0,57.1,12,0.0,0.0
+held-out test | 2. Base 0.5B + best prompt,85,100.0,20.0,41,52.9,39.7
+M2 suite | 2. Base 0.5B + best prompt,28,96.4,28.6,9,75.0,50.0
+held-out test | 3. Base 3B + best prompt,85,100.0,51.8,27,17.6,20.6
+M2 suite | 3. Base 3B + best prompt,28,100.0,35.7,9,0.0,45.0
+held-out test | 4. Fine-tuned 0.5B (short prompt),85,98.8,95.3,3,76.5,0.0
+M2 suite | 4. Fine-tuned 0.5B (short prompt),28,100.0,85.7,3,87.5,5.0

@@ -6,7 +6,7 @@
   <title>Keaton Ludwig · Data Science Portfolio</title>
   <meta name="description" content="Data science portfolio of Keaton Ludwig: physics-trained analyst working in forecasting, regression, statistical testing, and interactive visualization.">
   <meta property="og:title" content="Keaton Ludwig · Data Science Portfolio">
-  <meta property="og:description" content="Nine projects, from a peer-reviewed binary star study to store-level demand forecasting.">
+  <meta property="og:description" content="Nine projects, from a peer-reviewed binary star study to a fine-tuned language model for pharmacy safety.">
   <meta property="og:image" content="https://keatonl2.github.io/assets/img/binary-star-astroimagej.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -63,7 +63,7 @@
         <h2 id="about-h">A physicist's habits, applied to data</h2>
         <div class="prose">
           <p>My background is experimental physics. At Hastings College I designed and built a wireless power system with a calculated 82% transfer efficiency for my senior project, and I co-authored a peer-reviewed paper measuring a binary star system with a robotic telescope. That work taught me to treat every number as a measurement: it has a source, an error, and a limit to what it can tell you.</p>
-          <p>As a graduate student in data science at Bellevue University, I have applied that same discipline to larger and messier data: 1.6 million liquor transactions, 17,000 lottery drawings, a decade of county childcare prices, and insurance records. The projects below are grouped by the kind of evidence they give, from scientific research to predictive modeling and generative AI.</p>
+          <p>As a graduate student in data science at Bellevue University, I have applied that same discipline to larger and messier data: 1.6 million liquor transactions, 17,000 lottery drawings, a decade of county childcare prices, insurance records, ten seasons of NFL play-by-play, and 18,000 hospital medication orders that I turned into training data for a language model. The projects below are grouped by the kind of evidence they give, from scientific research to predictive modeling and generative AI.</p>
         </div>
 
         <ul class="habits">
@@ -83,11 +83,11 @@
 
         <dl class="toolkit">
           <dt>Languages and libraries</dt>
-          <dd>Python, pandas, scikit-learn, matplotlib, Plotly, HTML/CSS/JavaScript</dd>
+          <dd>Python, pandas, scikit-learn, PyTorch, Hugging Face Transformers, Streamlit, matplotlib, Plotly, HTML/CSS/JavaScript</dd>
           <dt>Modeling</dt>
-          <dd>Linear and Poisson regression, random forests, gradient boosting, Croston-SBA for intermittent demand, time-aware validation</dd>
+          <dd>Linear and Poisson regression, random forests, gradient boosting, Croston-SBA for intermittent demand, time-aware validation, XGBoost with monotonic constraints, full fine-tuning of language models</dd>
           <dt>Statistics</dt>
-          <dd>Hypothesis testing, chi-square goodness of fit, Monte Carlo simulation, kernel density estimation, error and uncertainty analysis</dd>
+          <dd>Hypothesis testing, chi-square goodness of fit, Monte Carlo simulation, bootstrap confidence, Brier score and calibration, kernel density estimation, error and uncertainty analysis</dd>
           <dt>Communication</dt>
           <dd>Dashboards, infographics, slide decks, and peer-reviewed writing</dd>
           <dt>Scientific tools</dt>
@@ -247,6 +247,7 @@
               <ul class="links">
                 <li><a href="https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fkeatonl2.github.io%2Fprojects%2Fmedical-insurance-cost-regression%2Fmedical-insurance-cost-regression-slides.pptx">View the slides</a></li>
                 <li><a href="projects/medical-insurance-cost-regression/medical-insurance-cost-regression-slides.pptx">Download (PowerPoint)</a></li>
+                <li><a href="https://github.com/keatonl2/keatonl2.github.io/blob/main/projects/medical-insurance-cost-regression/medical-insurance-cost-regression.ipynb">Read the code (Jupyter notebook)</a></li>
                 <li><a href="https://github.com/keatonl2/keatonl2.github.io/tree/main/projects/medical-insurance-cost-regression">README</a></li>
               </ul>
               <figure class="shot wide"><a href="https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fkeatonl2.github.io%2Fprojects%2Fmedical-insurance-cost-regression%2Fmedical-insurance-cost-regression-slides.pptx" tabindex="-1" aria-hidden="true"><img src="assets/img/insurance-predicted-vs-actual.png" alt="" loading="lazy" width="1598" height="584"></a></figure>
@@ -289,40 +290,57 @@
             </div>
           </article>
 
-          <article class="project" id="genai">
-            <div class="plate pending">
-              <span class="value words">In progress</span>
-              <span class="what">to be added when complete, this term</span>
+          <article class="project" id="sig-translator">
+            <div class="plate">
+              <span class="value">41 → 3</span>
+              <span class="what">critical errors on 85 held-out sigs, before and after fine-tuning. Flag F1 rose from 0.38 to 0.88.</span>
             </div>
             <div>
-              <h3>Generative AI Application</h3>
-              <p class="area">Generative AI applications</p>
-              <p class="summary">My current generative AI project. I will add it once I can document the full problem, implementation, evaluation, and results.</p>
+              <h3>Prescription Sig Translator: Fine-Tuning a Small Language Model for Pharmacy Safety</h3>
+              <p class="area">Generative AI applications<br>Streamlit app running a fully fine-tuned model locally</p>
+              <p class="summary">I translate prescription shorthand into patient labels at work, and abbreviations like QD (daily) are easy to misread as QID (four times daily). Prompting could not teach a model when to stop: even a 3B model flagged none of the error-prone sigs. So I built 845 training examples from real MIMIC-IV orders and fully fine-tuned all 494 million parameters of Qwen2.5-0.5B. It now flags 7 of 8 error-prone abbreviations on my hand-written test set, and the Streamlit app adds a rule-based check that catches the uppercase QD the model still misses.</p>
+              <dl class="facts">
+                <dt>Data</dt><dd>MIMIC-IV Clinical Database Demo v2.2 (PhysioNet): 18,087 medication orders, turned into 845 labeled sigs</dd>
+                <dt>Tools</dt><dd>Python, PyTorch, Hugging Face Transformers (full fine-tune, no LoRA), Qwen2.5, Streamlit, scikit-learn, regex safety checks</dd>
+              </dl>
               <ul class="links">
-                <li><a href="https://github.com/keatonl2/keatonl2.github.io/tree/main/projects/generative-ai-application">README</a></li>
+                <li><a href="projects/prescription-sig-translator/presentation/prescription-sig-translator-presentation.pdf">View the presentation (PDF)</a></li>
+                <li><a href="https://github.com/keatonl2/keatonl2.github.io/blob/main/projects/prescription-sig-translator/prescription-sig-translator-fine-tuning.ipynb">Read the code (Jupyter notebook)</a></li>
+                <li><a href="https://github.com/keatonl2/keatonl2.github.io/blob/main/projects/prescription-sig-translator/app.py">App source (Streamlit)</a></li>
+                <li><a href="https://github.com/keatonl2/keatonl2.github.io/tree/main/projects/prescription-sig-translator">README</a></li>
               </ul>
+              <figure class="shot wide"><a href="https://github.com/keatonl2/keatonl2.github.io/tree/main/projects/prescription-sig-translator/screenshots" tabindex="-1" aria-hidden="true"><img src="assets/img/sig-translator-rule-check.png" alt="" loading="lazy" width="1600" height="891"></a></figure>
             </div>
           </article>
 
-          <article class="project" id="applied">
-            <div class="plate pending">
-              <span class="value words">In progress</span>
-              <span class="what">to be added when complete, this term</span>
+          <article class="project" id="fourth-down">
+            <div class="plate">
+              <span class="value">15.0%</span>
+              <span class="what">of 2025 fourth-down calls were confident mistakes, down from 19.6% in 2016. 88.7% were kicks when going was better.</span>
             </div>
             <div>
-              <h3>Applied Data Science Project</h3>
+              <h3>Go For It: Predicting NFL Fourth-Down Conversions and Evaluating Coaching Decisions</h3>
               <p class="area">Applied, end-to-end project development</p>
-              <p class="summary">My second major applied project, covering the full workflow from framing the question to communicating the result. It will be added when its scope, methods, and results are final.</p>
+              <p class="summary">Can richer models predict fourth-down conversions better than yards to go alone, and do NFL teams make the call that maximizes their chance of winning? Across ten seasons of play-by-play data, XGBoost barely beat a distance-only table, and the gain did not hold up across seasons. The value is in the decision engine: it combines win-probability, field-goal, and punt models, refits them on 50 game-level bootstrap samples, and flags a call only when 90% of the refits agree. The finding holds at every confidence threshold, with conversion odds shaded down for selection bias, and under the new kickoff rules.</p>
+              <dl class="facts">
+                <dt>Data</dt><dd>nflverse play-by-play, 2016–2025 (CC BY 4.0): 484,254 plays, 6,785 go-for-it attempts</dd>
+                <dt>Tools</dt><dd>Python, pandas, scikit-learn, XGBoost with monotonic constraints, Brier score and calibration, bootstrap uncertainty, season-based validation</dd>
+              </dl>
               <ul class="links">
-                <li><a href="https://github.com/keatonl2/keatonl2.github.io/tree/main/projects/applied-data-science-project">README</a></li>
+                <li><a href="projects/nfl-fourth-down-decisions/nfl-fourth-down-white-paper.pdf">Read the white paper (PDF)</a></li>
+                <li><a href="projects/nfl-fourth-down-decisions/nfl-fourth-down-presentation-video.mp4">Watch the narrated presentation (8 min)</a></li>
+                <li><a href="https://github.com/keatonl2/keatonl2.github.io/blob/main/projects/nfl-fourth-down-decisions/nfl-fourth-down-decisions.ipynb">Read the code (Jupyter notebook)</a></li>
+                <li><a href="projects/nfl-fourth-down-decisions/nfl-fourth-down-slides.pdf">Slides (PDF)</a></li>
+                <li><a href="https://github.com/keatonl2/keatonl2.github.io/tree/main/projects/nfl-fourth-down-decisions">README</a></li>
               </ul>
+              <figure class="shot wide"><a href="projects/nfl-fourth-down-decisions/nfl-fourth-down-white-paper.pdf" tabindex="-1" aria-hidden="true"><img src="assets/img/nfl-fourth-down-mistakes-by-season.png" alt="" loading="lazy" width="1286" height="586"></a></figure>
             </div>
           </article>
         </div>
 
         <aside class="why" aria-labelledby="why-h">
           <h3 id="why-h">Why nine projects and not ten</h3>
-          <p>Each project stands for one distinct competency, and nine cover the range I want to show, from a physical experiment to generative AI. Any other piece of coursework I could add would repeat a competency already shown here. A tenth project would make the portfolio longer without showing a new skill.</p>
+          <p>Each project stands for one distinct competency, and nine cover the range I want to show, from a physical experiment to a fine-tuned language model. Any other piece of coursework I could add would repeat a competency already shown here. A tenth project would make the portfolio longer without showing a new skill.</p>
         </aside>
       </div>
     </section>

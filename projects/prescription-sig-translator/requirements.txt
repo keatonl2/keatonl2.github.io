@@ -1,0 +1,5 @@
+streamlit>=1.50
+transformers>=4.51
+torch>=2.3
+accelerate
+pandas

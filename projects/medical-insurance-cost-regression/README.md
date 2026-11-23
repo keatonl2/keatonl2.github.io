@@ -5,6 +5,7 @@ A comparison of linear regression and random forest regression for explaining an
 | | |
 |---|---|
 | **Competency area** | Regression modeling and healthcare analytics |
+| **Code** | [medical-insurance-cost-regression.ipynb](medical-insurance-cost-regression.ipynb) (full analysis, run top to bottom with saved outputs) |
 | **Slides** | [View online](https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fkeatonl2.github.io%2Fprojects%2Fmedical-insurance-cost-regression%2Fmedical-insurance-cost-regression-slides.pptx) · [Download PowerPoint, with speaker notes](medical-insurance-cost-regression-slides.pptx) |
 
 ![Predicted against actual charges: linear regression (left) and random forest (right)](../../assets/img/insurance-predicted-vs-actual.png)
@@ -44,15 +45,17 @@ The Healthcare (medical insurance) dataset by P. Patil on Kaggle: 1,338 insured 
 
 ## Tools
 
-Python, pandas, and scikit-learn (Pipeline, OneHotEncoder, LinearRegression, RandomForestRegressor), with matplotlib for the plots.
+Python, pandas, NumPy, and scikit-learn (Pipeline, ColumnTransformer, OneHotEncoder, LinearRegression, RandomForestRegressor), with matplotlib and seaborn for the plots.
 
 ## How to run
 
-<!-- TODO (Keaton): add the analysis notebook to this folder as `medical-insurance-cost-regression.ipynb`, then confirm these steps. -->
+The notebook has every cell's saved output, so GitHub shows the full analysis without running anything.
 
-1. Download `insurance.csv` from the Kaggle Healthcare dataset (Patil) into this folder.
-2. Install the requirements: `pip install pandas scikit-learn matplotlib jupyter`
-3. Open and run the analysis notebook from top to bottom. The fixed random seed reproduces the results above.
+To reproduce it:
+
+1. Download `insurance.csv` from the Kaggle Healthcare dataset (Patil) into this folder. The data is not committed.
+2. `pip install -r requirements.txt`
+3. Open `medical-insurance-cost-regression.ipynb` and run all cells. The fixed random seed reproduces the results above.
 
 ## Limitations and ethics
 
